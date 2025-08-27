@@ -1,12 +1,43 @@
-# React + Vite
+# Classic Snake Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a **classic Snake Game** implemented in **React** using **arrays** to manage the snake's body and game grid.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Grid-based movement using a 2D array logic.
+- Snake grows when it eats food.
+- Game ends when the snake collides with itself or the wall.
+- Score tracking.
+- Restart button to play again.
+- Arrow key controls for movement.
 
-## Expanding the ESLint configuration
+## How It Works
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- The game grid is represented using an array of cells.
+- The snake is stored as an **array of objects**, each object representing a segment with `x` and `y` coordinates.
+- Food is placed randomly on the grid, avoiding the snake's current position.
+- On each game loop tick:
+  - The snake moves by adding a new head in the current direction.
+  - If the snake eats food, the snake grows and score increases.
+  - If the snake collides with walls or itself, the game ends.
+- React state hooks (`useState`) and effects (`useEffect`) handle the game logic and rendering.
+
+## Controls
+
+- **Arrow Up**: Move up
+- **Arrow Down**: Move down
+- **Arrow Left**: Move left
+- **Arrow Right**: Move right
+- **Restart button**: Restart the game
+
+## Technologies Used
+
+- **React**
+- **JavaScript**
+- **HTML/CSS (inline styling)**
+
+## How to Run
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/AmiyaPiyush1/SnakeGame.git
